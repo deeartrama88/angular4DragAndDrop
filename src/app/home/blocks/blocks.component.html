@@ -1,0 +1,17 @@
+<div class="blocksWrap">
+    <h1> Blocks view </h1>
+    <ul>
+        <li *ngFor="let image of userImages; let i = index;">
+            <div class="imageObject">
+                <div class="imgBlock">
+                    <img src="{{ image.imageUrl}}" alt="">
+                </div>
+                <div class="imgBlockSpec">name: {{ image.imagesName }}</div>
+                <div class="imgBlockSpec">user: {{ image.uploadedUser }}</div>
+                <div class="imgBlockSpec">size: {{ image.fileSize }}</div>
+                <div class="imgBlockSpec">checksum: {{ image.checkSum }}</div>
+                <div class="closeBlockImage" (click)="deleteUserImage(i)"> x</div>
+            </div>
+        </li>
+    </ul>
+</div>

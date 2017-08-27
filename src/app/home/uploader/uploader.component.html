@@ -1,0 +1,22 @@
+<h1>Image Uploader</h1>
+<image-upload
+        id="imageUploader"
+        (click)="dropZoneClick(imageUpload, $event)"
+        #imageUpload
+        [dropBoxMessage]="'Click to select image or drop your images here!'"
+        (onFileUploadFinish)="onFileDropped($event)"
+        [extensions]="['jpeg', 'png']"
+        (onRemove)="onImageRemoved($event)"></image-upload>
+<div class="buttons">
+  <button class="saveBtn btn btn-success"
+          [ngClass]="{'disabled': imagesFilesArray.length === 0}"
+          [disabled]="imagesFilesArray.length === 0 ? 'disabled' : ''"
+          (click)="saveToLocalStorage()">SAVE
+  </button>
+  <button class="saveBtn btn btn-danger"
+          (click)="imageUpload.deleteAll()"
+          [disabled]="imagesFilesArray.length === 0 ? 'disabled' : ''"
+          [ngClass]="{'disabled': imagesFilesArray.length === 0}">CLEAR ALL
+  </button>
+</div>
+<hr>

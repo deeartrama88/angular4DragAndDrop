@@ -1,0 +1,27 @@
+<div class="tableWrap table">
+    <hr>
+    <table class="table">
+        <thead>
+            <tr>
+                <td *ngFor="let val of headers"> {{ val }} </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of imagesArray">
+                <td *ngFor="let val of generateArray(row)">
+                    {{ val }}
+                </td>
+                <td style="text-align: center;">
+                    <button class="btn btn-primary" (click)="viewImage(row)"> view </button>
+                    <button class="btn btn-danger" (click)="deleteImage(row)"> delete </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="popUp" *ngIf="popUp">
+        <img src="{{ popUpImageSrc }}">
+        <hr>
+        <button class="btn btn-primary" (click)="closePopUp()">Close</button>
+    </div>
+</div>

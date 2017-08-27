@@ -1,1 +1,190 @@
-/* You can add global styles to this file, and also import other style files */
+body { background: #d6d6d6; }
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: grey;
+    text-align: center;
+    margin-bottom: 30px;
+}
+#imageUploader .file-upload {
+    border: 4px dashed darkgrey;
+}
+body #imageUploader .x-mark {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    float: right;
+    background-color: black;
+    opacity: .7;
+    color: white;
+    margin: 2px;
+    position: relative;
+    left: 14px;
+}
+body #imageUploader .close {
+    padding-right: 7px;
+    top: 2px;
+}
+body #imageUploader .image { margin: 6px 13px 6px 6px; }
+body #imageUploader .image:hover > .x-mark[_ngcontent-c1] { display: block; }
+.saveBtn {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+    margin: 10px;
+}
+body .upload.button { display: none; }
+body .clear.button { display: none; }
+.file-upload { cursor: pointer; }
+.file-upload.hr-inline-group:before {
+    display: block;
+    content: "Click or drop files here";
+    font-size: 40px;
+    font-weight: bold;
+    color: grey;
+    text-align: center;
+}
+body #imageUploader .drag-box-message { display: none; }
+.buttons { text-align: center; }
+form label {
+    display: block;
+    font-size: 20px;
+    color: grey;
+}
+form {
+    width: 600px;
+    margin: auto;
+}
+form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+form button.btn.btn-primary {
+    font-size: 40px;
+    padding: 20px 50px;
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+input.ng-invalid.ng-touched {
+    border-color: red;
+}
+.error {
+    color: red;
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 2px;
+}
+.error.credentialsError {
+    padding: 10px;
+    background: #ffa5a5;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+body #imageUploader .image {
+    height: 200px;
+    width: 200px;
+}
+.message.saved {
+    background: green;
+    color: white;
+    font-size: 30px;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.3s linear;
+}
+header, footer {
+    background: white;
+    padding: 20px;
+}
+footer {  }
+header h1 { margin: 0; }
+footer h1 { margin: 0; }
+.blocksWrap ul li {
+    list-style: none;
+}
+.blocksWrap ul {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+.blocksWrap .imageObject {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px grey;
+    padding: 10px;
+    margin: 10px 0;
+    position: relative;
+}
+.blocksWrap .imageObject:hover .closeBlockImage { display: block; }
+.imageObject img {
+    width: auto;
+    height: 150px;
+}
+.blocksWrap ul { padding: 0; }
+.imgBlockSpec {
+    max-width: 200px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.closeBlockImage {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0 10px 3px;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    cursor: pointer;
+    display: none;
+}
+.closeBlockImage:hover {
+    box-shadow: 0 0 10px grey;
+}
+.imgBlock {
+    margin: auto;
+    text-align: center;
+}
+.blocksWrap {
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+}
+
+table td {
+    max-width: 200px;
+    overflow: hidden;
+    border-left: 1px solid #dddddd;
+}
+.popUp {
+    background: white;
+    box-shadow: 0 0 10px;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+.tableWrap {
+    position: relative;
+}
+.popUp img {
+    max-width: 100%;
+    max-height: 500px;
+}
+.minHeight {
+    min-height: calc(100vh - 147px);
+}
+.logOutBtn {
+    float: right;
+}
